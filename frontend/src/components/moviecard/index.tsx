@@ -1,16 +1,22 @@
+import { type } from "@testing-library/user-event/dist/type";
 import MovieScore from "components/moviescore";
 import { Link }   from "react-router-dom";
+import { Movie } from "types/movie";
 
+type Props = {
+    movie: Movie;
+}
 
-function moviecard(){
+function moviecard({ movie } : Props){
 
-    const movie = {
-        id: 1,
-        image: "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/jBJWaqoSCiARWtfV0GlqHrcdidd.jpg",
-        title: "The Witcher",
-        count: 2,
-        score: 4.5
-    };
+    //OBJETO MOCKADO
+    //const movie = {
+    //    id: 1,
+    //    image: "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/jBJWaqoSCiARWtfV0GlqHrcdidd.jpg",
+    //    title: "The Witcher",
+    //    count: 2,
+    //    score: 4.5
+    //};
 
     return(
         <div>
