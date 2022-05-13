@@ -33,7 +33,7 @@ function Listas(){
 
     },[pageNumber]);
 
-   //OBJETO MOCKADO
+   //OBJETO MOCKADO. DEVE-SE UTILIZAR PROPS
     //const movie = {
     //    id: 1,
     //    image: "https://www.themoviedb.org/t/p/w533_and_h300_bestv2/jBJWaqoSCiARWtfV0GlqHrcdidd.jpg",
@@ -42,9 +42,13 @@ function Listas(){
     //    score: 4.5
     //};
 
+    const handlePageChange = (newPageNumber : number) => {
+        setPageNumber(newPageNumber);
+    }
+
     return(
         <>
-        <Paginacao  />
+        <Paginacao page={page} onChange={handlePageChange}/>
 
             <div className="container">
                 <div className="row">
